@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-A native iOS coffee brewing toolkit. Brew at home, or out for coffee: pick your beans and a recipe and follow it step by step (weigh, pour, time), or make a tasting card from a great cup. Scan a bean bag to log it, convert grinder settings between 121 grinders, make tasting cards. No account, no ads.
+A native iOS coffee brewing toolkit. Brew at home, or out for coffee: pick your beans and a recipe and follow it step by step (weigh, pour, time), or make a tasting card from a great cup. Scan a bean bag to log it, convert grinder settings between 121 grinders. No account, no ads.
 
 <p>
   <a href="https://apps.apple.com/app/id6790759118"><img src="badges/app-store-en.svg" height="48" alt="Download on the App Store"></a>
