@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-A native iOS coffee brewing toolkit. Pick a brew method and follow it step by step: weigh, pour, time. Scan a bean bag to log it, convert grinder settings between 121 grinders, make tasting cards. No account, no ads.
+A native iOS coffee brewing toolkit. Brew at home, or out for coffee: pick your beans and a recipe and follow it step by step (weigh, pour, time), or make a tasting card from a great cup. Scan a bean bag to log it, convert grinder settings between 121 grinders, make tasting cards. No account, no ads.
 
 <p>
   <a href="https://apps.apple.com/app/id6790759118"><img src="badges/app-store-en.svg" height="48" alt="Download on the App Store"></a>
@@ -19,7 +19,7 @@ A native iOS coffee brewing toolkit. Pick a brew method and follow it step by st
 | Data | SwiftData; iCloud sync through the user's own private CloudKit database |
 | Purchases | StoreKit 2: yearly subscription and one-time Lifetime purchase |
 | System surfaces | WidgetKit (home and lock screen), Live Activities |
-| On-device ML | Vision text recognition (Chinese + English), Foundation Models |
+| ML | Vision text recognition (Chinese + English, on-device); Foundation Models (Private Cloud Compute, on-device model as fallback) |
 | Server | Cloudflare Worker (TypeScript) for purchase verification |
 | Languages | English, Simplified Chinese |
 
@@ -47,7 +47,7 @@ flowchart LR
 ## Engineering highlights
 
 - Account-free purchase verification: StoreKit 2 signed transactions checked against a pinned Apple root certificate; refunds handled through App Store Server Notifications V2.
-- Bean bag scanning: on-device OCR and a rule parser, with on-device Foundation Models filling gaps only when the recognized text backs the answer.
+- Bean bag scanning: the photo and its on-device OCR text go to Apple's Private Cloud Compute through the Foundation Models framework; without it, the on-device model and a rule parser take over. All layers share a 15-second budget.
 - Particle size from a photo: thresholding, connected-component analysis and a printed calibration square, reported as volume-weighted D10/D50/D90.
 - Subscription and Lifetime state verified on the device, with an offline grace period.
 
