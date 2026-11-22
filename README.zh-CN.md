@@ -5,7 +5,7 @@
 原生 iOS 咖啡冲煮工具箱。在家冲，也能出门喝：选好豆子和配方，按步骤称豆、注水、计时；喝到好咖啡，做一张品鉴卡。拍豆袋自动录入，121 台磨豆机刻度互转。无账号、无广告。
 
 <p>
-  <a href="https://apps.apple.com/app/id6790759118"><img src="badges/app-store-zh.svg" height="48" alt="在 App Store 下载"></a>
+  <a href="https://apps.apple.com/app/id6790759118"><img src="badges/app-store-en.svg" height="48" alt="在 App Store 下载"></a>
   &nbsp;
   <a href="https://brewscience.win"><img src="badges/website-zh.svg" height="48" alt="访问官网：brewscience.win"></a>
 </p>
